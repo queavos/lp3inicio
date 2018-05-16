@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import unae.lp3.app.model.Pelicula;
-
+//@RequestMapping(value="/")
 @Controller
 public class HomeController {
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
@@ -21,7 +21,6 @@ public class HomeController {
 
 	@RequestMapping(value = "/peliculas", method = RequestMethod.GET)
 	public String goPeliculas(Model model) {
-		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
 		List<Pelicula> peliculas = getLista();
 		model.addAttribute("peliculas", peliculas);
 		return "pelis";
