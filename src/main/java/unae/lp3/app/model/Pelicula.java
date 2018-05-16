@@ -1,5 +1,7 @@
 package unae.lp3.app.model;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Pelicula {
@@ -21,6 +23,35 @@ public class Pelicula {
 		this.genero = genero;
 		this.imagen = imagen;
 	}
+	
+	public Pelicula(int id, String titulo, int duracion, String clasificacion, String genero, String imagen,
+			Date fechaEstreno) {
+		super();
+		this.id = id;
+		this.titulo = titulo;
+		this.duracion = duracion;
+		this.clasificacion = clasificacion;
+		this.genero = genero;
+		this.imagen = imagen;
+		this.fechaEstreno = fechaEstreno;
+	}
+	public Pelicula(int id, String titulo, int duracion, String clasificacion, String genero, String imagen,
+			String fechaEstreno) {
+		super();
+		this.id = id;
+		this.titulo = titulo;
+		this.duracion = duracion;
+		this.clasificacion = clasificacion;
+		this.genero = genero;
+		this.imagen = imagen;
+		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+		try {
+		this.fechaEstreno = formatter.parse(fechaEstreno);
+		} catch (ParseException e) {
+			System.out.println("Error: " + e.getMessage());
+		}
+	}
+
 	// Getters y Setters
 	public int getId() {
 		return id;
@@ -63,6 +94,14 @@ public class Pelicula {
 	}
 	public void setFechaEstreno(Date fechaEstreno) {
 		this.fechaEstreno = fechaEstreno;
+	}
+	public void setFechaEstreno(String fechaEstreno) {
+		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+		try {
+		this.fechaEstreno = formatter.parse(fechaEstreno);
+		} catch (ParseException e) {
+			System.out.println("Error: " + e.getMessage());
+		}
 	}
 	public String getEstatus() {
 		return estatus;

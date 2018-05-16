@@ -1,5 +1,6 @@
 package unae.lp3.app.controller;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.LinkedList;
 import java.util.List;
@@ -30,14 +31,20 @@ public class HomeController {
 		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
 		List<Pelicula> lista = null;
 		lista = new LinkedList<>();
-		Pelicula peli1 = new Pelicula(1, "Power Rangers", 105, "A", "Accion", "powranger.jpg");
-		Pelicula peli2 = new Pelicula(2, "El engendro", 105, "A", "Terror", "engendro.jpg");
-		Pelicula peli3 = new Pelicula(3, "Ocean 11", 145, "A", "Accion", "ocean11.jpg");
-		Pelicula peli4 = new Pelicula(4, "Indiana Jones VI", 125, "A", "Aventura", "indiana5.jpg");
-		lista.add(peli1);
-		lista.add(peli3);
-		lista.add(peli2);
-		lista.add(peli4);
-		return lista;
+		try {
+			Pelicula peli1 = new Pelicula(1, "Power Rangers", 105, "A", "Accion", "powranger.jpg","09-06-2018");
+			Pelicula peli2 = new Pelicula(2, "El engendro", 105, "A", "Terror", "engendro.jpg","30-07-2018");
+			Pelicula peli3 = new Pelicula(3, "Ocean 11", 145, "A", "Accion", "ocean11.jpg", "31-05-2018");
+			Pelicula peli4 = new Pelicula(4, "Indiana Jones VI", 125, "A", "Aventura", "indiana5.jpg",formatter.parse("06-06-2017"));
+			lista.add(peli1);
+			lista.add(peli3);
+			lista.add(peli2);
+			lista.add(peli4);
+			return lista;
+		} catch (ParseException e) {
+			System.out.println("Error: " + e.getMessage());
+			return null;
+		}
+
 	}
 }
