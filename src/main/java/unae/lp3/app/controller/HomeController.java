@@ -30,7 +30,7 @@ public class HomeController {
 	private List<Pelicula> getLista() {
 		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
 		List<Pelicula> lista = null;
-		lista = new LinkedList<>();
+		lista = new LinkedList<Pelicula>();
 		try {
 			Pelicula peli1 = new Pelicula(1, "Power Rangers", 105, "A", "Accion", "powranger.jpg","09-06-2018");
 			Pelicula peli2 = new Pelicula(2, "El engendro", 105, "A", "Terror", "engendro.jpg","30-07-2018");
