@@ -14,16 +14,9 @@ public class Pelicula {
 	private Date fechaEstreno;	
 	private String estatus="Activa";
 	// Constructore
-	public Pelicula(int id, String titulo, int duracion, String clasificacion, String genero, String imagen) {
-		super();
-		this.id = id;
-		this.titulo = titulo;
-		this.duracion = duracion;
-		this.clasificacion = clasificacion;
-		this.genero = genero;
-		this.imagen = imagen;
-	}
+	/*public Pelicula(String[] args) {}*/
 	
+/*
 	public Pelicula(int id, String titulo, int duracion, String clasificacion, String genero, String imagen,
 			Date fechaEstreno) {
 		super();
@@ -51,7 +44,7 @@ public class Pelicula {
 			System.out.println("Error: " + e.getMessage());
 		}
 	}
-
+*/
 	// Getters y Setters
 	public int getId() {
 		return id;
@@ -92,17 +85,22 @@ public class Pelicula {
 	public Date getFechaEstreno() {
 		return fechaEstreno;
 	}
-	public void setFechaEstreno(Date fechaEstreno) {
+
+ 
+/*	public void setFechaEstreno(Date fechaEstreno) {
 		this.fechaEstreno = fechaEstreno;
-	}
+	} */
+	
 	public void setFechaEstreno(String fechaEstreno) {
-		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 		try {
 		this.fechaEstreno = formatter.parse(fechaEstreno);
 		} catch (ParseException e) {
 			System.out.println("Error: " + e.getMessage());
 		}
 	}
+	
+	
 	public String getEstatus() {
 		return estatus;
 	}

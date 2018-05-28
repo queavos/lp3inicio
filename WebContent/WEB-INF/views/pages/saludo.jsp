@@ -8,6 +8,8 @@
 <title>Página - Saludo</title>
 <spring:url value="/resources" var="urlPublic" />
 <link rel="stylesheet" href="${urlPublic}/bootstrap/css/bootstrap.min.css">
+	<script src="${urlPublic}/js/jquery-3.3.1.min.js" ></script>
+<script src="${urlPublic}/bootstrap/js/bootstrap.min.js" ></script>
 </head>
 <body>
 <body>
@@ -16,5 +18,6 @@
 	<jsp:include page="../includes/navbar.jsp"></jsp:include>
 Soy Saludo
 </div>
+<jsp:include page="../includes/footer.jsp"></jsp:include>
 </body>
 </html>

@@ -9,12 +9,16 @@
 <title>Página - Index</title>
 <spring:url value="/resources" var="urlPublic" />
 <link rel="stylesheet" href="${urlPublic}/bootstrap/css/bootstrap.min.css"> 
+	<script src="${urlPublic}/js/jquery-3.3.1.min.js" ></script>
+<script src="${urlPublic}/bootstrap/js/bootstrap.min.js" ></script>
 </head>
 <body>
 	<div class="container">
 	<jsp:include page="../includes/header.jsp"></jsp:include>
 	<jsp:include page="../includes/navbar.jsp"></jsp:include>
+
 Soy Index
 </div>
+<jsp:include page="../includes/footer.jsp"></jsp:include>
 </body>
 </html>
