@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import unae.lp3.app.model.Pelicula;
 
-@Service
+//@Service
 public class PeliculasServiceImpl implements IPeliculasService {
 
 	private List<Pelicula> lista = null;
@@ -98,6 +98,18 @@ public class PeliculasServiceImpl implements IPeliculasService {
 	public void insert(Pelicula pelicula) {
 		// TODO Auto-generated method stub
 		lista.add(pelicula);
+	}
+
+	@Override
+	public void delete(int peliId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(Pelicula pelicula) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

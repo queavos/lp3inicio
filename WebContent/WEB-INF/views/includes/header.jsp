@@ -1,4 +1,4 @@
-<div class="jumbotron ">
+<div class="jumbotron jumbotron-fluid">
   <h1 class="display-4">Bienvenidos </h1>
   <p class="lead">Es la de LP3.</p>
   <hr class="my-4">

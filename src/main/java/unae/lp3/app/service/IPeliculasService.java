@@ -10,4 +10,6 @@ public interface IPeliculasService {
 	public Pelicula getPelicula(int peliId);
 	public Pelicula savePelicula(Pelicula pelicula);
 	public void insert(Pelicula pelicula);
+	public void delete(int peliId);
+	public void update(Pelicula pelicula);
 }
